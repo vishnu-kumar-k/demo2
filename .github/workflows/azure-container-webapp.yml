@@ -22,7 +22,7 @@ jobs:
       # Build and push Docker image to ACR
       - name: Build and Push Docker Image
         run: |
-          IMAGE_NAME=${{ secrets.REGISTRY_LOGIN_SERVER }}/python-api:${{ github.sha }}
+          IMAGE_NAME="${{ secrets.REGISTRY_LOGIN_SERVER }}/python-api:${{ github.sha }}"
           echo "Building Docker image $IMAGE_NAME"
           docker build -t $IMAGE_NAME .
           docker push $IMAGE_NAME
