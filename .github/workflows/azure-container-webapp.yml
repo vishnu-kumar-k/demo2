@@ -2,7 +2,7 @@ name: Python API CI/CD to Azure
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
 
 jobs:
   build-and-deploy:
